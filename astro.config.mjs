@@ -8,7 +8,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://gluonworks.github.io/",
+  site: "https://gluonworks.com/",
   integrations: [
     tailwind(),
     mdx(),
