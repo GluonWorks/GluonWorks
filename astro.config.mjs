@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-import vercelStatic from "@astrojs/vercel/static";
+// import vercelStatic from "@astrojs/vercel/static";
 import partytown from "@astrojs/partytown";
 
 import sitemap from "@astrojs/sitemap";
@@ -15,5 +15,5 @@ export default defineConfig({
     sitemap(), 
   ],
   output: "static",
-  adapter: vercelStatic()
+  // adapter: vercelStatic()
 });
