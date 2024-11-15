@@ -1,0 +1,83 @@
+---
+import Container from "../components/Container.astro";
+import Layout from "../layouts/Layout.astro";
+import Quote from "../components/Quote.astro";
+import PrimaryArrowButton from "../components/buttons/PrimaryArrowButton.astro";
+import Image from "astro/components/Image.astro";
+import pcb3 from "../assets/pcb3.jpg";
+import code2 from "../assets/code2.jpg";
+---
+
+<!-- Page Layout -->
+<Layout title="About Us">
+    <Container>
+        <!-- About -->
+        <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+            <div class="max-w-2xl mt-12">
+                <!-- Content -->
+                <div class="space-y-5 md:space-y-8">
+                    <h2 class="text-2xl font-bold md:text-3xl dark:text-white">Meet GluonWorks</h2>
+
+                    <p class="text-lg text-gray-800 dark:text-neutral-200">
+                        GluonWorks was founded with the express goal of fixing many of the problems associated with the engineering services industry. 
+                    </p>
+
+                    <p class="text-lg text-gray-800 dark:text-neutral-200">
+                        We operate faster and efficiently than other firms while maintaining higher standards of quality. We achieve these results through our unique business model and client engagement approach.
+                    </p>
+
+                    <p class="text-lg text-gray-800 dark:text-neutral-200">
+                        We believe that good communication is what separates good firms from great firms. We operate on a foundation of frequent, fluid, and comprehensive communication. Every client has a designated point of contact that will share progress and intake feedback on a regular basis, they will ensure that the project is going in the correct direction at all times.
+                        This feedback loop optimizes development time and ensures the results fully meet or exceed the expectations of the client.
+                    </p>
+
+                    <p class="text-lg text-gray-800 dark:text-neutral-200">
+                        We operate on a distributed basis with engineers living and working in various cities throughout the United States. Our primary facility for manufacturing and testing is located in Southeast Michigan.
+
+                    </p>
+
+                    <p class="text-lg text-gray-800 dark:text-neutral-200">
+                        Our team is comprised of seasoned professionals and fresh talent, united by a shared vision of
+                        transforming ideas into reality. With expertise spanning buisiness, electrical, and software
+                        engineering, we possess the versatility to tackle diverse challenges and deliver cutting-edge
+                        solutions.
+                    </p>
+
+                    <Image class="w-full rounded-xl" src={pcb3} alt={"PCB"} draggable={"false"} format={"jpg"} />
+
+                    <p class="text-lg text-gray-800 dark:text-neutral-200">
+                        We are willing and excited to work for companies of any size as well as individuals. There is no job too small or too big for GluonWorks.
+                    </p>
+
+                    <PrimaryArrowButton href="/services">View Our Services</PrimaryArrowButton>
+
+                    <p class="text-lg text-gray-800 dark:text-neutral-200">
+                        We have thus far worked with clients in the Biomedical, Industrial, Robotics/Automation, as well as Consumer Electronics industry. Our engineers are beyond capable of solving problems in nearly all domains.
+                    </p>
+
+                    <!-- <Quote quote="If you're not changing the world, the world is changing you" author=""/> -->
+
+                    <Image
+                        class="w-full rounded-xl"
+                        src={code2}
+                        alt={"Laptop with code"}
+                        draggable={"false"}
+                        format={"jpg"}
+                    />
+                    <!-- <h3 class="text-2xl font-semibold dark:text-white">Our Mission</h3> -->
+
+                    <p class="text-lg text-gray-800 dark:text-neutral-200">
+                        At GluonWorks, we understand that success is not just about what we create, but how we
+                        create it. That's why we prioritize collaboration, integrity, and customer satisfaction in
+                        everything we do. We partner closely with our clients, understanding their unique needs and
+                        challenges to deliver tailored solutions that exceed expectations.
+                    </p>
+
+                </div>
+                <!-- End Content -->
+            </div>
+
+            <!-- End About -->
+        </div>
+    </Container>
+</Layout>

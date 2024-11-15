@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import RightImageSection from "../components/RightImageSection.astro";
+import progressBuilding from "../assets/progress-building.avif";
+import pcb2 from "../assets/pcb2.jpg";
+import threedprint from "../assets/3dprint.jpg";
+import bedofnails from "../assets/bedofnails.webp";
+import code from "../assets/code1.jpg";
+import laptop from "../assets/laptop.jpg";
+import LeftImageSection from "../components/LeftImageSection.astro";
+import Features from "../components/Features.astro";
+import PrimaryArrowButton from "../components/buttons/PrimaryArrowButton.astro";
+---
+
+<!-- Page Layout -->
+<Layout title="Services">
+  <Container>
+    <div class="mt-16">
+      <Features
+        title="Why Choose GluonWorks?"
+        subTitle=""
+        benefits={[
+          "Like Gluons we provide the strong force your project needs",
+          "We always take the first principles approach",
+          "We are fun-loving engineers and enjoy optimizing the result",
+          "We deliver on short timelines",
+          "Good, fast, cheap. You can only choose two",
+        ]}
+      />
+    </div>
+
+    <h1
+      class="mt-12 text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl dark:text-white
+            mx-auto max-w-[85rem] items-center px-4 sm:px-6 lg:px-8 2xl:max-w-full"
+    >
+      Services
+    </h1>
+
+    <RightImageSection
+      title={"Design and Engineering"}
+      subTitle={"We provide solutions and support to get your idea realized"}
+      content = {[
+                  "Project Management: Regulatory Documentation, Product Lifecycle Management, Requirement Generation, System Integration",
+                  "Software Engineering: UI/UX Design, Desktop, Mobile, Web, and Cloud Development",
+                  "Electrical Engineering: Schematic Capture, PCB Design, Firmware Development, Simulation and Modelling, DFM/DFT",
+                  "Mechanical Engineering: Product Design, CAD Design, Simulation and Modelling, DFM/DFT"
+                ]}
+      single={false}
+      imgOne={code}
+      imgOneAlt={"code"}
+      imgTwo={pcb2}     
+      imgTwoAlt={"PCB"}
+      btnExists={false}
+      btnTitle={""}
+      btnURL={""}
+    />
+    <LeftImageSection
+      title={"Manufacturing"}
+      subTitle={"We are capable of facilitating small production manufacturing runs. We have a number of manufacturing partners both foreign and domestic which facilitate larger scale manufacturing initiatives on our behalf."}
+      img={threedprint}
+      imgAlt={"3D printing"}
+      btnExists={false}
+      btnTitle={""}
+      btnURL={""}
+    />
+
+    <RightImageSection
+    title={"Testing"}
+    subTitle={"We test and verify products for you"}
+    content = {[
+                "Software: HIL, SIL, MIL, Unit Testing, Integration Testing, System Testing",
+                "Hardware: Custom Test Fixtures, Bed of Nails, EMI/EMC, Functional Testing",
+              ]}
+    single={true}
+    imgOne={bedofnails}
+    imgOneAlt={"Bed of Nails"}
+    imgTwo={pcb2}
+    imgTwoAlt={"PCB"}
+    btnExists={false}
+    btnTitle={""}
+    btnURL={""}
+  />
+
+    <LeftImageSection
+      title={"Education"}
+      subTitle={"GluonWorks provides engineering guidance and mentoring at low to no cost to those with the desire to learn."}
+      img={laptop}
+      imgAlt={"Person typing on laptop"}
+      btnExists={true}
+      btnTitle={"Coming Soon"}
+      btnURL={""}
+    />
+
+    <!-- Pricing -->
+    <h1
+      class="mt-12 text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl dark:text-white
+          mx-auto max-w-[85rem] items-center px-4 sm:px-6 lg:px-8 2xl:max-w-full"
+    >
+      Service Plans
+    </h1>
+
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto break-words">
+      <!-- Grid -->
+      <div class="w-full grid gap-6 grid-cols-2 sm:gap-12 lg:gap-8 mx-auto">
+        <!-- Stats -->
+        <div>
+          <h4 class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-neutral-200">Project Based - Most Common</h4>
+          <p class="mt-2 sm:mt-3 text-white break-word">You define the project and we build it to your specification on a fixed timeline</p>
+          <p class="mt-1 text-gray-500 dark:text-neutral-500">*pricing depends on difficulty and timeline</p>
+        </div>
+        <!-- End Stats -->
+
+        <!-- Stats -->
+        <div>
+          <h4 class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-neutral-200">Hourly</h4>
+          <p class="mt-2 sm:mt-3 text-white break-word">We work on an as-needed basis</p>
+          <p class="mt-1 text-gray-500 dark:text-neutral-500">**retainers are available on request</p>
+        </div>
+        <!-- End Stats -->
+      </div>
+      <!-- End Grid -->
+      <h2 class="text-2xl mt-10 font-bold text-gray-500 dark:text-neutral-500"><i></i></h2>
+      <PrimaryArrowButton href="/contact">Get a Quote</PrimaryArrowButton>
+    </div>
+    <!-- End Pricing -->
+  </Container>
+</Layout>
